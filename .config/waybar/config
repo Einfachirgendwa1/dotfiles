@@ -29,7 +29,7 @@
     },
     "bluetooth": {
       "format": "<span color='#b4befe'></span> {status}",
-      "format-disabled": "", // an empty format will hide the module
+      "format-disabled": "<span color='#b4befe'>󰂲</span> {status}",
       "format-connected": "<span color='#b4befe'></span> {num_connections}",
       "tooltip-format": "{device_enumerate}",
       "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
