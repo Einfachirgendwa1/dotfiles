@@ -14,7 +14,8 @@
       }
     },
     "clock": {
-      "format": "<span color='#b4befe'> </span>{:%H:%M}",
+      "format": "<span color='#b4befe'> </span>{:%H:%M:%S}",
+      "interval": 1
     },
     "backlight": {
       "device": "intel_backlight",
@@ -23,11 +24,11 @@
     },
     "pulseaudio": {
       "format": "<span color='#b4befe'>{icon}</span> {volume}%",
-      "format-muted": "",
+      "format-muted": "<span color='#b4befe'>󰝟 </span> {volume}%",
       "tooltip": false,
       "format-icons": {
         "headphone": "",
-        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+        "default": ["", "", "󰕾 ", "󰕾 ", "󰕾 ", " ", " ", " "]
       },
       "scroll-step": 1,
     },
@@ -41,9 +42,9 @@
     "network": {
       "interface": "wlo1",
       "format": "{ifname}",
-      "format-wifi": "<span color='#b4befe'> </span>{essid}",
+      "format-wifi": "<span color='#b4befe'>   </span>{essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
-      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+      "format-disconnected": "<span color='#b4befe'>󰖪 </span>",
       "tooltip": false,
     },
     "battery": {
