@@ -28,7 +28,6 @@ window#waybar {
 }
 
 #clock,
-#backlight,
 #pulseaudio,
 #bluetooth,
 #network,
@@ -43,7 +42,6 @@ window#waybar {
   padding-right: 10px;
 }
 
-#backlight,
 #bluetooth {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;

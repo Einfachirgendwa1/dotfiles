@@ -2,7 +2,7 @@
   "layer": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "bluetooth", "network", "battery"],
+    "modules-right": ["pulseaudio", "bluetooth", "network", "battery", "tray"],
     "hyprland/workspaces": {
       "format": "{name}",
       "format": "{icon}",
@@ -48,4 +48,8 @@
       "format-charging": "<span color='#b4befe'></span> {capacity}%",
       "tooltip": false,
     },
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10
+    }
 }
