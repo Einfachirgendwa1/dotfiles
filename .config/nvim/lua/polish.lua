@@ -37,7 +37,7 @@ require("nvim-treesitter.configs").setup {
   },
 }
 
-vim.o.mouse = nil
+vim.o.mouse = ""
 vim.o.clipboard = "unnamed"
 
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
