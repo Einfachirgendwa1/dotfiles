@@ -2,7 +2,7 @@
   "layer": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "bluetooth", "network", "battery", "tray"],
+    "modules-right": ["bluetooth", "network", "pulseaudio", "battery", "tray"],
     "hyprland/workspaces": {
       "format": "{name}",
       "format": "{icon}",
