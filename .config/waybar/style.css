@@ -14,6 +14,9 @@ window#waybar {
 #workspaces,
 #workspaces button,
 #clock,
+#cpu,
+#temperature,
+#memory,
 #bluetooth,
 #network,
 #pulseaudio,
@@ -38,6 +41,7 @@ window#waybar {
 }
 
 /* Left of group */
+#cpu,
 #bluetooth {
   border-radius: 10px;
   border-top-right-radius: 0;
@@ -48,6 +52,7 @@ window#waybar {
 }
 
 /* Right of group */
+#memory,
 #network {
   border-radius: 10px;
   border-top-left-radius: 0;

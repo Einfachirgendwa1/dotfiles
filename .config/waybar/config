@@ -2,7 +2,7 @@
   "layer": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["bluetooth", "network", "pulseaudio", "battery", "tray"],
+    "modules-right": ["cpu", "temperature", "memory", "bluetooth", "network", "pulseaudio", "battery", "tray"],
     "hyprland/workspaces": {
       "format": "{name}",
       "format": "{icon}",
@@ -16,6 +16,22 @@
     "clock": {
       "format": "<span color='#b4befe'> </span>{:%H:%M:%S}",
       "interval": 1
+    },
+    "cpu": {
+      "interval": 1,
+      "format": "<span color='#b4befe'> </span> {usage}%",
+      "max-length": 10
+    },
+   "temperature": {
+      "critical-threshold": 80,
+      "format-critical": "<span color='#b4befe'> </span> {temperatureC}°C>",
+      "format": "<span color='#b4befe'> </span> {temperatureC}°C ",
+      "interval": 2
+    },
+    "memory": {
+      "interval": 10,
+      "format": "<span color='#b4befe'>  </span> {}%",
+      "max-length": 10
     },
     "pulseaudio": {
       "format": "<span color='#b4befe'>{icon}</span> {volume}%",
