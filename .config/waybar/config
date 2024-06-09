@@ -24,7 +24,7 @@
     },
    "temperature": {
       "critical-threshold": 80,
-      "format-critical": "<span color='#b4befe'> </span> {temperatureC}°C>",
+      "format-critical": "<span color='#b4befe'> </span> {temperatureC}°C",
       "format": "<span color='#b4befe'> </span> {temperatureC}°C ",
       "interval": 2
     },
