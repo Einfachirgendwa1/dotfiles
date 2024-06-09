@@ -13,6 +13,7 @@ window#waybar {
 /* Apply color and margins to everything */
 #workspaces,
 #workspaces button,
+#custom-spotify,
 #clock,
 #cpu,
 #temperature,
@@ -30,6 +31,7 @@ window#waybar {
 
 /* Alone */
 #workspaces,
+#custom-spotify,
 #clock,
 #pulseaudio,
 #battery,
