@@ -42,6 +42,7 @@ bindkey -r "^S"
 ulimit -c unlimited # Segmentation fault
 
 export EDITOR=nvim # I use neovim by the way
+export VISUAL=nvim
 
 # function run_info() { 
 #   # Prepend "info" to the command line and run it.
