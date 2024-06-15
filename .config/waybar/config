@@ -14,10 +14,9 @@
       }
     },
     "custom/spotify": {
-      "format": "  {}",
+      "format": "{}",
       "max-length": 40,
       "exec": "$HOME/.config/waybar/mediaplayer.sh",
-      "exec-if": "pgrep spotify",
       "interval": 1
     },
     "clock": {
