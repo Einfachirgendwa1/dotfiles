@@ -165,6 +165,7 @@ alias cb="cargo build"
 alias cr="cargo run"
 alias ca="cargo add"
 alias cn="cargo new"
+alias ctd="cargo tauri dev"
 alias lg="lazygit"
 alias ls="exa -1 -F -T -L=1 --group-directories-first --icons"
 
