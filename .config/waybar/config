@@ -69,6 +69,7 @@
       "format-icons": [" ", " ", " ", " "],
       "format-charging": "<span color='#b4befe'>󱐋</span> {capacity}%",
       "tooltip": false,
+      "interval": 2,
     },
     "tray": {
       "icon-size": 21,
