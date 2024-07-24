@@ -1,5 +1,7 @@
 #!/bin/sh
 
+exit 1
+
 player_status=$(playerctl status 2>&1)
 
 if [ "$player_status" = "No players found" ]; then
