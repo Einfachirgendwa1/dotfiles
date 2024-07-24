@@ -8,7 +8,7 @@ fi
 if [[ $in_tty == false ]]; then
         case $- in *i*)
                 if [[ -z $TMUX_PANE ]] || [[ ${TMUX_PANE#"%"} == 0 ]]; then 
-                        [[ -z $TMUX ]] && tmux -u && exit 
+                        [[ -z $TMUX ]] && tmux -f /home/Faris/.tmux.conf -u && exit 
                 fi
         esac
 fi
@@ -20,6 +20,7 @@ export PATH="/var/tmp/portage/sys-apps/ripgrep-14.1.0/image/usr/bin:$PATH"
 export PATH="/var/tmp/portage/sys-apps/fd-9.0.0/image/usr/bin:$PATH"
 export PATH="/home/Faris/.cargo/bin:$PATH"
 export PATH="/home/Faris/.local/bin:$PATH"
+
 export GTK_THEME="Catppuccin-Mocha-Standard-Green-Dark"
 
 # Ghidra braucht das
@@ -37,6 +38,9 @@ alias cat=bat
 
 # SSH
 eval $(ssh-agent) > /dev/null
+
+# Kanata
+pgrep kanata > /dev/null || kanata -c /home/Faris/.config/kanata/kanata.kbd -n 2>&1 > /dev/null &
 
 bindkey -r "^S"
 ulimit -c unlimited # Segmentation fault
@@ -168,6 +172,20 @@ alias cn="cargo new"
 alias ctd="cargo tauri dev"
 alias lg="lazygit"
 alias ls="exa -1 -F -T -L=1 --group-directories-first --icons"
+
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+cdi_function() {
+    BUFFER="cdi && clear $BUFFER"
+    zle accept-line
+}
+
+
+zle -N cdi_function
+bindkey "^[d" cdi_function
 
 # Init
 if [[ $in_tty == false ]]; then
