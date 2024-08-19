@@ -3,8 +3,6 @@
   ;
   ret
   grv
-  bspc
-  lmet
   lctrl
 )
 
@@ -13,7 +11,5 @@
   ret             ;; ö -> Return
   ;               ;; Return -> ö
   (multi lctrl b) ;; ^ -> Ctrl+B (tmux)
-  lmet            ;; Delete -> Windows Key
-  (multi lctrl c) ;; Windows Key -> Ctrl+C
   bspc            ;; Ctrl -> Delete
 )
