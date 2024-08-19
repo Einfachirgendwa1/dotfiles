@@ -12,11 +12,10 @@ return {
         "asm_lsp",
         "clangd",
         "cmake",
-        "html",
         "lua_ls",
         "marksman",
         "pyright",
-        "tsserver",
+        -- "tsserver",
         -- add more arguments for adding more language servers
       })
     end,

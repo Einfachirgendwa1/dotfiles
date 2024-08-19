@@ -47,6 +47,17 @@ return {
       csharp_ls = {
         root_dir = function() return "." end,
       },
+
+      html = {
+        init_options = {
+          configurationSection = { "html", "css", "javascript" },
+          embeddedLanguages = {
+            css = true,
+            javascript = true,
+          },
+          provideFormatter = false,
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {
