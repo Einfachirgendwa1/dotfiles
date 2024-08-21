@@ -20,28 +20,42 @@
       "interval": 1
     },
     "clock": {
-      "format": "<span color='#b4befe'> </span>{:%H:%M:%S}",
+      "format": "<span color='#f5c2e7'> {:%H:%M:%S}</span>",
       "interval": 1
     },
     "cpu": {
       "interval": 1,
-      "format": "<span color='#b4befe'> </span>{usage}% ",
+      "format": "<span color='#f38ba8'> {usage}% </span>",
       "max-length": 10
     },
    "temperature": {
       "critical-threshold": 80,
-      "format-critical": "<span color='#f5c2e7'> </span>{temperatureC}°C ",
-      "format": "<span color='#b4befe'> </span>{temperatureC}°C ",
+      "format-critical": "<span color='#f5c2e7'> {temperatureC}°C </span>",
+      "format": "<span color='#fab387'> {temperatureC}°C </span>",
       "interval": 2
     },
     "memory": {
       "interval": 10,
-      "format": "<span color='#b4befe'> </span>{}%",
+      "format": "<span color='#f9e2af'> {}%</span>",
       "max-length": 10
     },
+    "bluetooth": {
+      "format": "<span color='#a6e3a1'> on </span>",
+      "format-disabled": "<span color='#a6e3a1'>󰂲 off </span>",
+      "format-connected": "<span color='#a6e3a1'>{num_connections} </span>",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
+    },
+    "network": {
+      "interface": "wlo1",
+      "format": "<span color='#89dceb'>{ifname}</span>",
+      "format-wifi": "<span color='#89dceb'> {essid}</span>",
+      "format-disconnected": "<span color='#89dceb'>󰖪 </span>",
+      "tooltip": false,
+    },
     "pulseaudio": {
-      "format": "<span color='#b4befe'>{icon}</span>{volume}%",
-      "format-muted": "<span color='#b4befe'>󰝟 </span>{volume}%",
+      "format": "<span color='#89b4fa'>{icon}{volume}%</span>",
+      "format-muted": "<span color='#89b4fa'>󰝟 {volume}%</span>",
       "tooltip": false,
       "format-icons": {
         "headphone": " ",
@@ -49,24 +63,10 @@
       },
       "scroll-step": 1,
     },
-    "bluetooth": {
-      "format": "<span color='#b4befe'> </span>on ",
-      "format-disabled": "<span color='#b4befe'>󰂲 </span>off ",
-      "format-connected": "<span color='#b4befe'></span>{num_connections} ",
-      "tooltip-format": "{device_enumerate}",
-      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
-    },
-    "network": {
-      "interface": "wlo1",
-      "format": "{ifname}",
-      "format-wifi": "<span color='#b4befe'> </span>{essid}",
-      "format-disconnected": "<span color='#b4befe'>󰖪 </span>",
-      "tooltip": false,
-    },
     "battery": {
-      "format": "<span color='#b4befe'>{icon} </span>{capacity}%",
+      "format": "<span color='#b4befe'>{icon} {capacity}%</span>",
       "format-icons": [" ", " ", " ", " "],
-      "format-charging": "<span color='#b4befe'>󱐋 </span>{capacity}%",
+      "format-charging": "<span color='#b4befe'>󱐋 {capacity}%</span>",
       "tooltip": false,
       "interval": 2,
     },
