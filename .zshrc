@@ -28,10 +28,13 @@ export PATH=$JAVA_HOME/bin:$PATH
 export BAT_THEME="Catppuccin Mocha"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 alias cat="bat --paging=never"
+export JQ_LIB_DIR=/usr/lib64
 
 eval $(ssh-agent) > /dev/null
+export $(dbus-launch)
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
-pgrep kanata > /dev/null || kanata -c /home/Faris/.config/kanata/kanata.kbd -n 2>&1 > /dev/null &
+xhost si:localuser:root > /dev/null
 
 bindkey -r "^S"
 ulimit -c unlimited
