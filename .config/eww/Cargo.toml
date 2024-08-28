@@ -1,0 +1,8 @@
+[package]
+name = "eww"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+jq-rs = "0.4.1"
+rust_search = "2.1.0"
