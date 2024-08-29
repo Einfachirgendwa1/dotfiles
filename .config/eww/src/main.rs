@@ -36,7 +36,7 @@ impl ToMyError for &str {
 }
 
 fn main() {
-    for line in BufReader::new(
+    for _ in BufReader::new(
         UnixStream::connect(&format!(
             "{}/hypr/{}/.socket2.sock",
             env::var("XDG_RUNTIME_DIR").unwrap(),
