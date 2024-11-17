@@ -7,9 +7,10 @@ fi
 # Tmux
 if [[ $in_tty == false ]]; then
         case $- in *i*)
-                if [[ -z $TMUX_PANE ]] || [[ ${TMUX_PANE#"%"} == 0 ]]; then 
-                        [[ -z $TMUX ]] && tmux -f /home/Faris/.tmux.conf -u && exit 
+                if [[ -z $TMUX_PANE ]] || [[ ${TMUX_PANE#"%"} == 0 ]]; then
+                        [[ -z $TMUX ]] && tmux -f /home/Faris/.tmux.conf -u && exit
                 fi
+                ;;
         esac
 fi
 
@@ -30,11 +31,11 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 alias cat="bat --paging=never"
 export JQ_LIB_DIR=/usr/lib64
 
-eval $(ssh-agent) > /dev/null
+eval $(ssh-agent) >/dev/null
 export $(dbus-launch)
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
-xhost si:localuser:root > /dev/null
+xhost si:localuser:root >/dev/null
 
 bindkey -r "^S"
 ulimit -c unlimited
@@ -42,10 +43,9 @@ ulimit -c unlimited
 export EDITOR=nvim
 export VISUAL=nvim
 
-
 export ZSH="$HOME/.oh-my-zsh"
 
-PS1="%F{green}%n%f %F{cyan}%~%f\$(git branch 2>/dev/null | grep -e '\* ' | sed 's/^..\(.*\)/ %F{yellow}(\1)%f/') %F{white}$ "
+PS1=" %F{cyan}%~%f\$(git branch 2>/dev/null | grep -e '\* ' | sed 's/^..\(.*\)/ %F{yellow}(\1)%f/') %F{white}$ "
 
 CASE_SENSITIVE="false"
 HYPHEN_INSENSITIVE="true"
@@ -80,10 +80,9 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
 cdi_function() {
-    BUFFER="cdi && clear $BUFFER"
-    zle accept-line
+        BUFFER="cdi && clear $BUFFER"
+        zle accept-line
 }
-
 
 zle -N cdi_function
 bindkey "^[d" cdi_function
