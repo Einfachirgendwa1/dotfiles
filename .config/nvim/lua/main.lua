@@ -1,0 +1,8 @@
+require "scripts.settings"
+require "scripts.neotest"
+require "scripts.rainbow_braces"
+require "scripts.dap"
+require "scripts.fourmulo"
+require "scripts.tmux_compile"
+require "scripts.clangd"
+require "scripts.spelling"

@@ -41,11 +41,11 @@ return {
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
-      asm_lsp = {
-        root_dir = function() return "." end,
-      },
       csharp_ls = {
         root_dir = function() return "." end,
+      },
+      bashls = {
+        filetypes = { "sh", "zsh" },
       },
 
       html = {
