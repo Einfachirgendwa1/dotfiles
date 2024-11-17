@@ -2,7 +2,6 @@
   caps
   ;
   ret
-  grv
   lctrl
 )
 
@@ -10,6 +9,5 @@
   lctrl           ;; Capslock -> Left Control
   ret             ;; ö -> Return
   ;               ;; Return -> ö
-  (multi lctrl b) ;; ^ -> Ctrl+B (tmux)
   bspc            ;; Ctrl -> Delete
 )
