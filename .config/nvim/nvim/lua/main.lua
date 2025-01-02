@@ -17,7 +17,6 @@ local settings = {
 }
 
 local module_initializers = {
-  require "scripts.auto_debug_hover",
   require "scripts.settings",
   require "scripts.neotest",
   require "scripts.rainbow_braces",

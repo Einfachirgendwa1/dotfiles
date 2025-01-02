@@ -1,0 +1,92 @@
+-- --- @type integer?
+-- local buffer = nil
+--
+-- --- @type integer?
+-- local window = nil
+--
+-- --- @type string?
+-- local last_content = nil
+--
+-- --- @param content string
+-- local function display_hover(content)
+--   if last_content ~= nil and content == last_content then return end
+--   last_content = content
+--   if buffer == nil then buffer = vim.api.nvim_create_buf(false, true) end
+--
+--   local dap = require"dap"
+--   if dap.status() ~= "" then local
+--     response = dap.goto_
+--
+--   local lines = vim.split(content, "\n")
+--   if #lines == 0 then return end
+--   local width = 0
+--   for _, line in ipairs(lines) do
+--     width = math.max(width, #line)
+--   end
+--   width = math.min(width + 1, 60)
+--   local height = math.min(#lines, 30)
+--
+--   if width == 0 then return end
+--
+--   vim.api.nvim_buf_set_lines(buffer, 0, -1, false, lines)
+--
+--   if window == nil then
+--     window = vim.api.nvim_open_win(buffer, false, {
+--       height = height,
+--       width = width,
+--       anchor = "NE",
+--       relative = "editor",
+--       row = 0.5,
+--       col = vim.o.columns,
+--       style = "minimal",
+--       border = "rounded",
+--     })
+--     vim.api.nvim_set_option_value("filetype", "markdown", { buf = buffer })
+--     vim.api.nvim_set_option_value("wrap", true, { win = window })
+--   else
+--     vim.api.nvim_win_set_width(window, width)
+--     vim.api.nvim_win_set_height(window, height)
+--   end
+--   require("render-markdown").enable()
+-- end
+--
+-- vim.api.nvim_create_autocmd("CursorMoved", {
+--   callback = function()
+--     vim.lsp.buf_request_all(0, "textDocument/hover", vim.lsp.util.make_position_params(), function(results)
+--       if #results == 0 then return end
+--       local entry = results[1]
+--       if entry.error then
+--         vim.notify(entry.error.message)
+--       else
+--         if entry.result ~= nil then display_hover(entry.result.contents.value) end
+--       end
+--     end)
+--   end,
+-- })
+
+-- --- @type vim.treesitter.LanguageTree?
+-- local parser = nil
+--
+-- --- @return TSNode
+-- local function get_root()
+--   if parser == nil then parser = vim.treesitter.get_parser(0) end
+--   return parser:parse()[1]:root()
+-- end
+--
+-- ---@param node TSNode
+-- ---@return table<table<integer, integer, integer, integer>>
+-- local function vars(node)
+--   local result = {}
+--   for child in node:iter_children() do
+--     table.insert(result, child:type())
+--     vars(child)
+--   end
+--   return result
+-- end
+--
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--   pattern = { "*.rs" },
+--   callback = function() vim.notify(vim.inspect(vars(get_root()))) end,
+-- })
+
+return function(_) end

@@ -11,6 +11,7 @@ return {
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "asm_lsp",
         "clangd",
+        "cmake",
         "lua_ls",
         "marksman",
         "pyright",
